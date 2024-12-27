@@ -1,0 +1,179 @@
+Catalyst Center VA for ESXi FAQ
+
+Q. What is Catalyst Center Virtual Appliance (VA) for ESXi?
+Catalyst Center VA is the same on premises Catalyst Center (formerly Cisco DNA Center) that
+thousands of customers are already using to manage and operate their Cisco Catalyst enterprise
+networks. The solution includes a complete network management system (NMS), automation and
+orchestration engine, cloud-based analytics and AI/ML reasoner, and an advanced software defined
+network controller. The Catalyst Center VA software has been optimized to operate on the VMware
+ESXi platform so that the features and controls function just like they do on the Cisco on premises
+version. Catalyst Center VA can now be deployed on a customer’s VMware ESXi infrastructure
+utilizing vCenter for platform management.
+ 
+Q. What is the difference between Cisco DNA Center VA and Catalyst Center VA?
+The Cisco DNA Center solution has been renamed, and now is called Catalyst Center. Same product,
+new name.
+ 
+Q. Why would a company deploy Catalyst Center VA on ESXi?
+Efficiencies through standardization of platforms is the new IT norm, so companies are defining
+hardware standards on which to run their server applications. Customers deploying Catalyst Center
+VA on ESXi can utilize their existing hardware virtualization platforms. This allows organizations to
+consolidate IT hardware for improved utilization which streamlines the administration of IT resources
+and drives sustainability. The CAPEX to deploy an additional Virtual Machine on an existing hardware
+platform is lower than it would be to purchase and deploy a new physical appliance, and this can
+greatly accelerate the time to value and ROI for the project. Additionally, customers are already
+familiar with the ESXi architecture for high availability and other complex configurations further
+simplifying deployment and adoption.
+
+Q. What are the other deployment platform options for Catalyst Center?
+There are currently three platform options for Catalyst Center, as well as a roadmap option.
+1. The Catalyst Center Appliance, which is based on the Cisco UCS server and is available in three
+sizes to accommodate different network sizes. This option is available today. Visit the Catalyst
+Center FAQ for more information on this option.
+2. The Catalyst Center VA for ESXi, which is the subject of this FAQ. This option is available today.
+3. The Catalyst Center VA for AWS Cloud, which is an IaaS option for customers that prefer a
+software-only solution running in AWS Cloud infrastructure. This option is available today. Visit the
+Catalyst Center VA on AWS Cloud FAQ for more information.
+4. The Catalyst Center VA for Microsoft Azure Cloud is currently in the planning and development
+stages. In the coming months, we will be able to provide more information on the planned release
+dates. This option is not yet available.
+
+Q. What is the difference between the features in Catalyst Center on premises and Catalyst Center VA?
+The Catalyst Center VA for ESXi is also an on-premises solution which provides an identical IT user
+experience to the current on premises version. However, there are a few features that are not included
+in the 2.3.7.4 ESXi version. (Check release notes for an updated list):
+• Automation: Cisco Wide Area Bonjour application, Cisco vManage for SD-WAN, Cisco DNA Traffic
+Telemetry Appliance, Cisco Secure Network Analytics.
+• Wireless: Cisco User-Defined Network (UDN), Cisco Umbrella.
+• Assurance: Sensor.
+• System Workflows: Backup and Restore using VMware vSphere Client snapshot function, Backup
+and Restore from Catalyst Center hardware appliance to Catalyst Center on ESXi virtual appliance.
+• Setting Page: Authentication API Encryption.
+• Security Policy Access (SPA): Security Sensor in Endpoint Analytics, Group-Based Policy
+Analytics (GBPA).
+• Telemetry: VM- and host-level telemetry.
+For more information on Catalyst Center features refer to these documents:
+Catalyst Center on ESXi VA Documentation
+Catalyst Center Datasheet
+Catalyst Center Solution Overview
+Catalyst Center FAQ
+
+Q. Where can I find a complete list of features in Catalyst Center?
+The Catalyst Center Datasheet has a listing of almost all of the features. This datasheet is updated
+with each new release.
+
+Q. What type of customer deployment is the best fit for Catalyst Center VA?
+Cisco Catalyst customers with fewer than 1,000 switches/routers/WLCs and fewer than 4,000
+access points (see scale below) should consider Catalyst Center VA. This is especially true if they
+already have adopted VMware ESXi virtualization within their organization.
+
+Q. What is the difference between the scale and capacity in Catalyst Center on-premises and Catalyst
+Center VA?
+The first release will only be supporting the scale of the on-premises medium (44 core) appliance.
+This is 1,000 devices (switch, router, wireless controller), 4,000 access points, and 25,000
+endpoints. We are currently evaluating additional scales, but this is not on our committed roadmap.
+Customers requiring greater scale should deploy Catalyst Center on a Cisco physical appliance. For a
+more detailed listing of the scale of all options please refer to the Catalyst Center datasheet Appliance
+scale.
+
+Q. What does Catalyst Center VA cost?
+A. The software for Catalyst Center VA on ESXi (DN-SW-APL) is provided at no cost to our customers.
+Catalyst Center is included with your Catalyst Essentials and Catalyst Advantage software
+subscription. Cisco offers an annual support package for Catalyst Center, and all customers are
+advised to purchase this optional support. When the software PID (DN-SW-APL) is entered into
+CCW, this support option will be recommended (CON-ECMUS-DN5SWQA3).
+
+Q. How do my customers download the software for Catalyst Center VA for ESXi?
+Customers can download the OVA file in the software download center of CCO. Consult the Catalyst
+Center VA Ordering Guide for more information.
+
+Q. Can I migrate my current Catalyst Center on-premises installation to VA on ESXi?
+Not yet. We are working on this capability, but for now we only support new deployments on the ESXi
+VA. We will have more information in late June 2024, and this FAQ will be updated.
+
+Q. Can I migrate my current Catalyst Center VA on AWS to an on-premises VA on ESXi?
+Not yet. We are working on this capability, but for now we only support new deployments on the ESXi
+VA. We will have more information in late June 2024, and this FAQ will be updated.
+
+Q. Does Catalyst Center VA replace Cisco Prime® Infrastructure?
+Yes, Catalyst Center on-premises and Catalyst Center VA are the replacement upgrades for Cisco
+Prime Infrastructure which has been announced EoL. Also, since this VA for ESXi is a $0 PID with the
+device licenses, this is a great option for Cisco Prime customers to migrate to the latest and greatest
+network management tool – Cisco Catalyst Center.
+
+Q. What are the deployment requirements for the Catalyst Center VA?
+The deployment requirements include server requirements and virtual machine requirements as
+follows:
+Server Requirements
+Feature Description
+Virtualization platform and
+hypervisor
+VMware vSphere 7.0.x or 8.0.x including all patches, (which includes ESXi and
+vCenter Server)
+Processor Intel 2.1 GHz and above CPU - or -
+AMD Gen2+ 2.0 GHz and above CPU
+Hyperthreading Enabled
+RAM 264 GB minimum (ESXi + VA)
+RAID Any (provided that the virtual machine’s IOPS and bandwidth requirements are
+met).
+Virtual Machine Requirements
+Feature Description
+Processors 32 vCPUs, with 64-GHz reservation
+Memory 256-GB DRAM, with 256-GB reservation
+Storage 3 TB SSD (solid-state drive) - If you plan to create backups of your virtual
+appliance, also reserve additional datastore space.
+I/O Bandwidth 180 MB/sec
+IOPS (Input/output operations
+per second rate)
+2,000 – 2,500
+See Catalyst Center VA on ESXi deployment guide for more information.
+
+Q. Is Catalyst Center VA for ESXi available worldwide?
+Almost, it is available in all Cisco sales regions except for China. Embargo regions cannot access the
+software either.
+
+Q. Does Catalyst Center on ESXi support High Availability (HA)?
+Yes! The Catalyst Center on ESXi offers high availability solutions as part of the vSphere platform.
+Customers are encouraged to speak with their VMware account representative to obtain details. For a
+basic overview see the VMware Docs section on vSphere availability settings.
+
+Q. Will my network devices still operate if the Catalyst Center VA goes down?
+Yes! Your network devices will keep their configuration and keep running. You won’t be able to
+change the configuration while the server is down, but your network will still operate without any
+downtime.
+
+Q. What types of managed services could be offered using Catalyst Center VA?
+The current version of Catalyst Center VA does not have managed services offering at this time.
+
+Q. Are any Cisco Services available for Catalyst Center VA?
+As your intent-based networking journey continues, Cisco Services helps you extract relevant
+network data and insights with customized software and integrations that simplify network operations
+and lower operating costs. In support of Catalyst Center VA capabilities, Cisco Services provides
+advisory, implementation, software integration, and optimization services, solution support, and
+technical training. Our Cisco Services experts will help you achieve extraordinary business outcomes
+and anticipate change so you can pivot quickly, securely, and confidently. View all services.
+
+Q. How often will the features in Catalyst Center VA be updated?
+Features will be updated with the same cadence as the on-premises version. You will be notified
+within the Catalyst Center dashboard when new features are added, with links to training material.
+
+Q. Do customers who have been using Catalyst Center on-premises version need to buy separate licenses
+to manage the network device using Catalyst Center VA?
+No, you do not. If you have a Catalyst License (Essentials, or Advantage) for your network devices,
+you can use this for either the VA or on-premises version. Note that Catalyst Licenses were formally
+known as Cisco DNA Licenses (Essentials, or Advantage). The name has changed, but the license
+functionality is the same. However, customers will need to buy a $0 VA license for the server.
+
+Q. Is Catalyst Center VA supported on ESXi cloud servers, such as Azure VMware Solution (AVS), Google
+Cloud Services, or AWS Cloud.
+No, we do not support ESXi hardware hypervisors on cloud platforms. We do currently have a
+Catalyst Center version for AWS available via AWS Marketplace, but this is not a hypervisor – it is
+AWS native.
+
+Q. After my Catalyst Center VA on ESXi is installed and running will I receive updates to the Catalyst Center
+system at the same cadence as the regular on-premises Catalyst Center? Is the upgrade process the
+same as it is for the on-premises version.
+Yes, upgrades will come at approximately the same time as the on-premises Catalyst Center. There
+may be a difference of a week or two because of our internal processing. Upgrading is also the same
+process; a pop-up message within the Catalyst Center dashboard will announce the new version and
+the full upgrade can be performed from within the same dashboard.
